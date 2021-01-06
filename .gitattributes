@@ -1,2 +1,2 @@
 * linguist-vendored
-*.json linguist-vendored=false
+*.json linguist-vendored=true
