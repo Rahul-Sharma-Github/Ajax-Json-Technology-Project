@@ -1,2 +1,3 @@
-* linguist-vendored
-*.json linguist-vendored=false
+*.html linguist-detectable=true
+*.json linguist-detectable=true
+*.js linguist-detectable=true
