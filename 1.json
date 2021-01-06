@@ -1,0 +1,22 @@
+[
+
+{
+    "question":"Here $ represent the - operator (subtraction)<br>so X - X = 0 first condition<br>X $ (Y $ Z) = X - (Y - Z) = X - Y+ Z<br>It can be written as X $ Y + Z<br>Example: 2012 - 0 + 2012 - 1912 = 2112",
+    "option":["(A) 1","(B) 2","(C) 3","(D) 4"],
+    "answer":"(A)",
+    "solution":"This is Solution<br>if a=10"
+},
+{
+    "question":"Find the greatest number that will divide 148 246 and 623 leaving remainders 4 6 and 11 respectively?",
+    "option":["(A) 20","(B) 12","(C) 6","(D) 48"],
+    "answer":"(B)",
+    "solution":"This is Solution<br>if a=10"
+},
+{
+    "question":"What is the highest divider of 40 from below options?",
+    "option":["(A) 5","(B) 10","(C) 15","(D) 20"],
+    "answer":"(D)",
+    "solution":"This is Solution<br>if a=10"
+}
+
+]

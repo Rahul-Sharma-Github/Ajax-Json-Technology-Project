@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+        background-color: rgb(245, 218, 180);
+      }
+
+      div.list{
+        margin-bottom: 100px;
+        height: auto;
+        width: 100%;
+      }
+
+      span.qn{
+        background-color: crimson;
+        color: rgb(250, 249, 248);
+        border: 1px solid rgb(43, 41, 41);
+        padding: 5px 15px;
+      }
+      span.q{
+        display: block;
+        padding: 10px 0px;
+      }
+      p.Answer{
+        box-shadow: 0px 2px 0.2px rgb(158, 8, 8);
+      }
+      details{
+        outline: none;
+        text-align: left;
+        font-size: 20px;
+        display: block;
+        border: 1px solid rgb(66, 119, 14);
+        background-color: rgb(233, 232, 232);
+      }
+      summary{
+        outline: none;
+        display: block;
+        padding: 15px 0px 15px 0px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(66, 119, 14);
+      }
+      details p{
+        outline: none;
+      }
+      
+    </style>
+  </head>
+<body>
+
+<div id="box">
+
+</div>
+<script>
+  let box=document.getElementById("box");
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+
+    let htmlstring="";
+    for (let i = 0; i < myObj.length; i++) {
+       htmlstring=`
+       <div class="list">
+       <p class="question"><span class="qn">${i+1}</span><span class="q">${myObj[i].question}</span></p>
+       <p class="option">${myObj[i].option.join("<br>")}</p>
+       <p class="Answer">Answer = ${myObj[i].answer}</p>
+       <details>
+       <summary>Explanation</summary>
+       <p>${myObj[i].solution}</p>
+       </details>
+       
+       </div>
+       `;
+      
+      box.insertAdjacentHTML('beforeend',htmlstring);
+    }
+    
+  }
+};
+xmlhttp.open("GET", "1.json", true);
+xmlhttp.send();
+</script>
+
+
+
+</body>
+</html>
